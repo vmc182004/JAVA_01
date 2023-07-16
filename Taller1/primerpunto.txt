@@ -1,0 +1,51 @@
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class Ejemplo1 {
+    public static void main(String[] args) {
+        
+        Scanner reader = new Scanner(System.in);
+        String cadena,ced,ed,id;
+        cadena=JOptionPane.showInputDialog(null,"Elija una opción:\n"+"1.CITA DE OFTALMOLOGO\n"+"2.CITA CON MEDICO GENERAL\n"+"3.CITA CON GINECOLOGO\n"+"4.CITA CON ODONTOLOGO\n"+"5.CITA CON PSICOLOGO\n"); 
+        int op,cedula, edad,identificacion;
+        op=Integer.parseInt(cadena);
+    
+
+        switch(op){
+            case 1:
+            JOptionPane.showMessageDialog(null,"CITA AGENDADA CON OFTALMOLOGO");
+            break;
+
+            case 2: 
+            JOptionPane.showMessageDialog(null,"CITA CON MEDICO GENERAL");
+            id=JOptionPane.showInputDialog(null,"INGRESE SU IDENTIFICACIÓN");
+            identificacion=Integer.parseInt(id);
+            ed=JOptionPane.showInputDialog(null,"INGRESE SU EDAD");
+            edad=Integer.parseInt(ed);
+            if (op == 2) {
+                JOptionPane.showMessageDialog(null,"CITA AGENDADA\n" + "IDENTIFICACION:"+identificacion + "\n"+"EDAD:"+ edad);
+            }
+            break;
+
+            case 3:
+            JOptionPane.showMessageDialog(null,"CITA AGENDADA CON GINECOLOGO");
+            break;
+
+            case 4:
+            JOptionPane.showMessageDialog(null,"CITA CON ODONTOLOGO");
+            ced=JOptionPane.showInputDialog(null,"INGRESE SU CEDULA");
+            cedula=Integer.parseInt(ced);
+            if (op == 4) {
+               
+                JOptionPane.showMessageDialog(null,"Su cita queda agendada para el dia 28 de octubre "
+                + " identificad@ con " + cedula);
+            }
+            break;
+
+            case 5:
+            JOptionPane.showMessageDialog(null,"CITA AGENDADA CON PSICOLOGO");
+            break;
+        }
+        
+    }
+}

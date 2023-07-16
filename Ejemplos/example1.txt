@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+public class Example1 {
+    public static void main(String[] args) {
+        
+        Scanner reader = new Scanner(System.in);
+        JOptionPane.showInputDialog(null,"Elija una opciòn:\n"+"1.CITA DE OFTALMOLOGO\n"+"2.CITA CON MEDICO GENERAL\n"+"3.CITA CON GINECOLOGO\n"+"4.CITA CON ODONTOLOGO\n"+"5.CITA CON PSICOLOGO\n"); 
+        int op= reader.nextInt();
+        String resp, nom;
+
+        if (op==1){
+            JOptionPane.showMessageDialog(null, "CITA AGENDADA CON OFTALMOLOGO");
+        }
+        /* 
+        switch(op){
+            case 1:
+            JOptionPane.showMessageDialog(null,"CITA AGENDADA CON OFTALMOLOGO");
+            //System.out.println("CITA AGENDADA CON OFTALMOLOGO");
+            break;
+        }*/
+    }
+
+    
+}
